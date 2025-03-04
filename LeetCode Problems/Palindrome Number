@@ -1,1 +1,46 @@
+Problem 9: Palindrome Number
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Statement: 
+Given an integer x, return true if x is a palindrome, and false otherwise.
+
+Example 1:
+Input: x = 121
+Output: true
+Explanation: 121 reads as 121 from left to right and from right to left.
+
+Example 2:
+Input: x = -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Code Solution in C++:
+
+       bool isPalindrome(int x) {
+            
+           # Incase if negative integer is given as input -> it is not palindrome, function will return false
+            if (x < 0)
+               return false;
+
+            # If positive integer is given as input -> it may be palindrome
+            long reversed = 0;
+            int y = x;
+
+            while (y > 0) {
+                  reversed = reversed * 10 + y % 10;
+                  y /= 10;
+            }
+
+            return reversed == x;
+      }
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Detailed Explaination of above code:
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
